@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Guía de estudio · Destrezas Digitales 10-2</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#f6f7fb;--card:#fff;--tx:#1b2033;--mu:#5b6380;--ac:#4a3fd1;--ac2:#e8e6fb;--ok:#14804a;--okb:#dff5e8;--ko:#b3261e;--kob:#fde4e2;--bd:#dfe2ee;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12141f;--card:#1c1f30;--tx:#eceefa;--mu:#a2a8c6;--ac:#9b92ff;--ac2:#2a2757;--ok:#6fe0a2;--okb:#16372a;--ko:#ff9a93;--kob:#40201e;--bd:#2d3150;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#12141f;--card:#1c1f30;--tx:#eceefa;--mu:#a2a8c6;--ac:#9b92ff;--ac2:#2a2757;--ok:#6fe0a2;--okb:#16372a;--ko:#ff9a93;--kob:#40201e;--bd:#2d3150;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header{padding:22px 16px 8px;max-width:760px;margin:auto}
+h1{font-size:1.45rem;margin:0 0 4px;line-height:1.2}header p{margin:0;color:var(--mu);font-size:.92rem}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);display:flex;gap:6px;padding:10px 16px;max-width:760px;margin:auto;overflow-x:auto}
+nav button{flex:1;white-space:nowrap;border:1px solid var(--bd);background:var(--card);color:var(--tx);padding:9px 14px;border-radius:999px;font:inherit;font-weight:600;font-size:.92rem;cursor:pointer}
+nav button.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+main{max-width:760px;margin:auto;padding:4px 16px 40px}
+section{display:none}section.on{display:block}
+details{background:var(--card);border:1px solid var(--bd);border-radius:14px;margin:10px 0;overflow:hidden}
+summary{padding:14px 16px;font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:8px}
+summary::after{content:"＋";color:var(--ac)}details[open] summary::after{content:"－"}
+.body{padding:0 16px 14px}
+dl{margin:0}dt{font-weight:700;color:var(--ac);margin-top:10px}dd{margin:2px 0 0}
+.tip{background:var(--ac2);border-radius:10px;padding:10px 12px;margin-top:12px;font-size:.93rem}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px;margin:12px 0}
+.q{font-weight:700;margin:0 0 12px}
+.opt{display:block;width:100%;text-align:left;margin:7px 0;padding:11px 13px;border-radius:10px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);font:inherit;cursor:pointer}
+.opt.ok{background:var(--okb);border-color:var(--ok)}.opt.ko{background:var(--kob);border-color:var(--ko)}
+.exp{margin-top:10px;font-size:.92rem;color:var(--mu)}
+.btn{background:var(--ac);color:#fff;border:0;border-radius:10px;padding:11px 18px;font:inherit;font-weight:700;cursor:pointer;margin:6px 6px 0 0}
+.btn.s{background:var(--ac2);color:var(--ac)}
+.bar{height:8px;background:var(--bd);border-radius:9px;overflow:hidden;margin:6px 0 4px}.bar i{display:block;height:100%;background:var(--ac);width:0;transition:width .3s}
+.meta{display:flex;justify-content:space-between;color:var(--mu);font-size:.88rem}
+.fc{min-height:170px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:1.1rem;cursor:pointer;user-select:none}
+.fc small{display:block;color:var(--mu);margin-bottom:8px;font-size:.78rem;text-transform:uppercase;letter-spacing:.05em}
+table{width:100%;border-collapse:collapse;font-size:.9rem;margin-top:8px}td,th{border:1px solid var(--bd);padding:6px 8px;text-align:left}th{background:var(--ac2)}
+.wrap{overflow-x:auto}
+</style>
+</head>
+<body>
+<header><h1>📘 Guía de estudio · Destrezas Digitales</h1><p>Primera prueba, I período · Sección 10-2 · Prueba escrita. Estudia el resumen, practica con el quiz y repasa con tarjetas.</p></header>
+<nav id="nav"><button class="on" data-t="res">Resumen</button><button data-t="quiz">Quiz</button><button data-t="fc">Tarjetas</button><button data-t="tips">Consejos</button></nav>
+<main>
+<section id="res" class="on"></section>
+<section id="quiz"></section>
+<section id="fc"></section>
+<section id="tips"></section>
+</main>
+<script>
+const S=[
+["1. Internet y entorno web",[
+["Internet","Gran red internacional de computadoras llamada «red de redes». Objetivo: comunicarse de inmediato con cualquier parte del mundo para obtener información, programas o juegos."],
+["Origen: ARPANET","Red creada por el Ministerio de Defensa de EE. UU. en los años 60 (Advanced Projects Agency Net) para que la defensa del país compartiera recursos en una misma red."],
+["World Wide Web (www)","«Red global mundial»: sistema de documentos de hipertexto enlazados, accesibles por Internet con un navegador. Se compone de sitios y páginas web con texto, imágenes y video."],
+["Dominio","Nombre único que identifica a un sitio web en Internet (ej.: ctpaserri.ed.cr). Es más fácil de recordar que una dirección numérica IP."],
+["Hipertexto","Texto con enlaces (hiperenlaces) que llevan a otros documentos o páginas. Es la base de la web."],
+["Protocolos","Reglas que usan las computadoras para comunicarse en una red; permiten la conexión, comunicación y transferencia de datos entre dos puntos. Comunes: IP, TCP, DHCP, HTTP, FTP, Telnet, SMTP, SOAP. TCP/IP divide la información en paquetes (packets) y los envía por la red. FTP = transferencia de archivos."],
+["Protocolo HTTP","Hypertext Transfer Protocol: el «lenguaje» que usan los servidores web y los navegadores para las páginas web. HTTPS es la versión segura (candadito)."],
+["Dirección URL","Dirección única de un recurso en la web. Estructura: protocolo://dominio/ruta (ej.: https://www.mep.go.cr/inicio)."],
+["Navegadores","Programas para visualizar páginas web: Google Chrome, Microsoft Edge, Mozilla Firefox, Internet Explorer. Buscadores: Google, Bing, Yahoo, Ask (sirven para encontrar información)."]],
+"Confusión típica: navegador (programa para abrir la web, ej. Chrome) ≠ buscador (sitio para buscar, ej. Google)."],
+["2. Comunicación en Internet",[
+["Correo electrónico","Más rápido y fiable que el correo tradicional (no se extravía); emisor y receptor no tienen que estar conectados al mismo tiempo."],
+["Dirección de correo","usuario@dominio.organización.país. Partes: 1) usuario (nombre/ID), 2) arroba @ (separa usuario y dominio), 3) dominio (proveedor), 4) organización (.edu, .com, .org…), 5) extensión de país (.cr, .ar…). Ej.: andres@ejemplo.com.ar"],
+["Chat","Comunicación escrita instantánea entre dos o más personas. Puede ser público (cualquiera accede) o privado (solo 2 personas)."],
+["Telnet","Conexión remota a otro ordenador solo para mirar datos (consultar una base de datos, ej. libros de una biblioteca). No se pueden traer archivos (eso se hace con FTP)."],
+["Redes sociales","Facebook, X/Twitter, LinkedIn, TikTok, Instagram. Ventajas: comunicación rápida, comunidades, activismo, entorno educativo cooperativo, relación empresa-cliente. Desventajas: falta de privacidad, adicción y daños psicológicos si se usan en exceso."],
+["Videoconferencia","Comunicación oral y visual a distancia. Ventajas: multiplataforma (celular o PC), sin fronteras con Internet, contacto visual, facilita el teletrabajo."]],
+"Orden de la dirección de correo: usuario → @ → dominio → organización → país."],
+["3. Tecnologías emergentes",[
+["Industria 4.0","Nació en Alemania; «fábricas inteligentes» conectadas y basadas en datos (4.ª revolución industrial). Principios: conexión en red de personas, máquinas y cosas (Internet de las cosas), uso de datos para eficiencia, pruebas virtuales para mejorar calidad y rapidez, producción y mantenimiento basados en datos."],
+["Impresión 3D","Fabricación por adición: objeto creado por capas sucesivas de material. Ventajas: prototipos rápidos, diseños sin límites, reducción de costos. Desventajas: pérdida de puestos de trabajo, tiempo de producción, dependencia y contaminación por plástico."],
+["Realidad Aumentada (RA)","Combina el mundo real con elementos virtuales en tiempo real usando un dispositivo (celular, webcam, tablet). Ej.: Pokémon Go, Google Lens. Necesita: objeto real de referencia, dispositivo con cámara y software que interprete la imagen. En empresas: probar productos antes de comprar, menos costos de muestras y devoluciones, marketing interactivo."],
+["Realidad Virtual (RV)","Crea un ambiente 100 % digital que reemplaza lo real (inmersión completa). Diferencia clave: RV reemplaza la realidad; RA agrega elementos digitales a la realidad."],
+["Inteligencia Artificial (IA)","Algoritmos que buscan crear máquinas con capacidades similares a las humanas. Funciona con grandes cantidades de datos + procesamiento rápido + algoritmos que aprenden patrones. Usos: ventas y marketing (analiza tu navegación), medicina (diagnósticos)."],
+["Simuladores","Programas o aparatos que replican o recrean una actividad para dar experiencias y sensaciones. Tipos: conducción, carrera, vuelo, música, vida; también simulan el día a día de una empresa."]],
+"Para cada tecnología prepara: concepto, un ejemplo, una ventaja y una desventaja, y cómo se asocia a tu especialidad."],
+["4. Ciberseguridad y datos personales",[
+["Ciberseguridad","Protección de equipos, redes y datos contra accesos, robos o daños. Es necesaria porque guardamos información personal y financiera en línea. Violar la seguridad puede causar fraude, robo de identidad, pérdidas económicas, daño a la reputación y pérdida de datos de una organización."],
+["Datos personales","Información que identifica a una persona (nombre, cédula, dirección, teléfono, fotos, ubicación, cuentas, datos bancarios). Para una organización, los datos de clientes y empleados son un activo valioso que debe protegerse."],
+["Tipos de ataques (repaso general)","Phishing: correo o mensaje falso que imita a una entidad para robar datos. Malware: software dañino (virus, troyanos, spyware). Ransomware: secuestra archivos y pide rescate. Ingeniería social: engañar a la persona para que dé información. Suplantación de identidad. Fuerza bruta: probar contraseñas hasta acertar."],
+["Vulnerabilidades en línea","Contraseñas débiles, redes wifi públicas, no actualizar sistemas, instalar apps sospechosas, configurar mal la privacidad, aceptar solicitudes de desconocidos."],
+["Huella digital","Rastro de toda nuestra actividad en Internet. Se construye con 3 elementos: IP (identifica el dispositivo y revela ubicación, navegador, sistema operativo, idioma), cookies (datos que vinculan nuestras acciones) y redes sociales (lo que publicamos y comentamos). Aunque borremos publicaciones, los proveedores pueden conservarlas."],
+["Identidad digital","La «fotografía» de quiénes somos en la red: se forma por lo que publicamos nosotros y por lo que otros publican de nosotros. Los reclutadores la consultan al contratar."],
+["¿Para qué se usa la huella?","Publicidad dirigida: «si no estamos pagando por el producto, nuestra información es la paga». Ejemplo de abuso: Cambridge Analytica usó huellas digitales de millones de personas para influir en el voto."],
+["Cómo protegernos","Contraseñas largas (letras, números y símbolos), secretas, distintas por cuenta, sin nombres ni fechas importantes, cambiadas periódicamente. Navegar en páginas https:// con candadito; evitar wifi público; modo incógnito; cerrar sesiones. Correos distintos para trabajo, suscripciones y trámites. Revisar y borrar cookies. Eliminar apps que no usamos y no dar permisos innecesarios. Actualizar el sistema, usar clave en el dispositivo y apagar wifi, bluetooth y GPS si no se usan."],
+["Algoritmos","Operación matemática que, con los datos recopilados, da respuesta a un problema. Las redes los usan para mantenernos conectados más tiempo y mostrarnos publicidad e contenido según nuestra huella («más de lo mismo»)."],
+["Cámara de eco y filtro burbuja","Metáfora: solo escuchamos nuestra propia opinión repetida. Limita el debate y la diversidad de ideas. Cómo reducirla: informarse en medios oficiales, no eliminar a quienes piensan distinto, leer medios con los que no estamos de acuerdo."],
+["Trolls y bots","Trolls: perfiles falsos o anónimos que insultan o generan conflicto. Qué hacer: bloquear, denunciar y no engancharse."],
+["Desinformación","Contenido falso, manipulado o fuera de contexto, creado a propósito para dañar, estafar o por diversión. Misinformación: se comparte sin saber que es falso. Malinformación: contenido real usado en un contexto engañoso para dañar."],
+["8 categorías de desinformación","1) Contenido falso (fake news). 2) Sátira o parodia. 3) Conexión falsa (titular no corresponde; «ciberanzuelo»). 4) Contenido engañoso (datos usados a conveniencia). 5) Contexto falso. 6) Contenido impostor (usa logos o personas conocidas). 7) Contenido manipulado (imágenes o audios alterados, deepfakes con IA). 8) Contenido fabricado."],
+["Cómo verificar","Respirar si el contenido genera emoción fuerte; desconfiar de lo que nos gusta porque confirma lo que creemos; verificar en otras fuentes. Preguntas: ¿leí toda la noticia?, ¿cuál es la fuente?, ¿es actual?, ¿está en otros medios?, ¿tiene formato profesional?, ¿menciona expertos?, ¿es hecho u opinión?, ¿es broma o engaño?"]],
+"La desinformación debilita la democracia porque reduce la confianza en la información y las instituciones."],
+["5. Ciudadanía digital, ética y deberes",[
+["Ciudadanía digital","Conocimientos, actitudes y habilidades para actuar con responsabilidad, respeto y ética en el mundo digital, aplicando valores democráticos."],
+["Netiqueta","«Etiqueta en la red»: normas de buen comportamiento en línea (término de Virginia Shea, 1994). Ej.: tratar con respeto, no escribir en mayúsculas sostenidas (se interpreta como gritar), no compartir datos ajenos, pensar antes de publicar."],
+["Principios democráticos","Libertad (tiene límites: reglas de las redes, leyes y nuestra ética), igualdad (somos diferentes; pensar quién leerá nuestro mensaje) y fraternidad (compartir lo que aporta, silenciar el caos sin comentar ni compartir)."],
+["Valores","Respeto (hablar como cara a cara; no publicar fotos o comentarios de otros sin permiso), responsabilidad (pensar en consecuencias, seguir las reglas de cada sitio, no publicar si no se está seguro de la veracidad) y diálogo plural (hablar y escuchar a quien piensa distinto; es el antídoto de la cámara de eco)."],
+["Para evitar malentendidos","Expresar cómo nos sentimos («me alegra», «me molesta»), indicar (sarcasmo) si se usa y apoyarse en emoticones."],
+["Deberes del ciudadano digital","Respetar a las demás personas y la diversidad, proteger sus datos y los ajenos, verificar antes de compartir, respetar derechos de autor y reglas de las plataformas, usar contraseñas seguras, denunciar abusos."],
+["Derechos del ciudadano digital","Acceso a Internet y a la información, libertad de expresión (con límites), privacidad y protección de datos personales, seguridad, a no ser discriminado y a ser respetado en línea."],
+["Principios éticos y legales","Éticos: honestidad, respeto, responsabilidad, privacidad. Legales: derechos de autor (citar fuentes, no copiar ni piratear), leyes contra delitos informáticos, suplantación y acoso, y términos de uso de cada plataforma."],
+["Uso responsable de redes","Configurar la privacidad, no publicar ubicación ni datos sensibles (el GPS puede mostrar cuándo no estamos en casa), aceptar solo a quien conocemos, bloquear y denunciar abusos, limitar el tiempo de uso."]],
+"Las redes sociales no son el enemigo: bien usadas sirven para comunicar, educar y construir comunidad."],
+["6. Teclado y digitación",[
+["Fila base","Los dedos descansan sobre A S D F (mano izquierda) y J K L Ñ (mano derecha). Los pulgares van en la barra espaciadora."],
+["Dedos guía","Los índices tienen una marca en F y J para ubicar la posición sin mirar."],
+["Qué dedo usa cada tecla","Meñique: A, Q, Z (izq.) y Ñ, P (der.). Anular: S, W, X y L, O. Medio: D, E, C y K, I. Índice: F, R, V, G, T, B (izq.) y J, U, M, H, Y, N (der.)."],
+["Repaso","La información teórica está en el folleto de Destrezas Digitales, en cada meta: al inicio indica el dedo a usar. Practica sin mirar el teclado."]],
+"Repasa el folleto: el examen pide el dedo correcto para cada tecla."]
+];
+const Q=[
+["¿Cómo se conoce a Internet?",["Red de redes","Red local","Red privada","Red satelital"],0,"Internet es una gran red internacional de computadoras: la «red de redes»."],
+["ARPANET fue creada en los años 60 por…",["Una universidad alemana","El Ministerio de Defensa de EE. UU.","Google","La ONU"],1,"Fue una red de defensa de EE. UU. para compartir recursos."],
+["¿Qué significa HTTP?",["High Text Transfer Program","Hypertext Transfer Protocol","Hyper Terminal Tool Protocol","Home Text Transfer Page"],1,"HTTP es el protocolo de transferencia de hipertexto, el lenguaje de los servidores web."],
+["¿Qué protocolo se usa para transferir archivos?",["SMTP","DHCP","FTP","Telnet"],2,"FTP = File Transfer Protocol."],
+["TCP/IP divide la información en…",["Bloques de texto","Paquetes (packets)","Cookies","Dominios"],1,"Divide la información en paquetes y los envía por la red."],
+["Un hipertexto es…",["Un texto con enlaces a otros documentos","Un virus","Un tipo de navegador","Una dirección de correo"],0,"Los hiperenlaces conectan documentos y forman la web."],
+["Es un navegador:",["Mozilla Firefox","SMTP","Telnet","ARPANET"],0,"Firefox, Chrome y Edge son navegadores."],
+["Una URL es…",["Una contraseña","La dirección única de un recurso en la web","Un tipo de virus","Una red social"],1,"Ej.: https://www.sitio.com/pagina."],
+["En usuario@dominio.org.cr, el símbolo @ sirve para…",["Cifrar el mensaje","Separar el usuario del dominio","Indicar el país","Indicar la organización"],1,"El arroba separa el nombre de usuario del dominio."],
+["En una dirección de correo, «.cr» identifica…",["El usuario","La organización","El país","El proveedor"],2,"Es la extensión de país."],
+["Ventaja del correo electrónico frente al tradicional:",["Es más lento","Puede extraviarse","Emisor y receptor no deben estar conectados a la vez","Necesita una persona física"],2,"Es rápido, fiable y asincrónico."],
+["Telnet permite…",["Descargar archivos","Conectarse a un ordenador remoto solo para consultar datos","Hacer videollamadas","Enviar correos"],1,"Solo se puede mirar, no traer documentos (eso es FTP)."],
+["Un chat privado es aquel donde se comunican…",["Solo 2 personas","Cualquier usuario","Todos los contactos","Solo empresas"],0,"Los chats públicos permiten el acceso a cualquiera."],
+["Ventaja de la videoconferencia:",["Exige computadora de escritorio","Permite comunicación visual sin importar la distancia","Funciona sin Internet","No sirve para teletrabajo"],1,"Es multiplataforma y facilita el trabajo remoto."],
+["La Industria 4.0 se originó en…",["Japón","Estados Unidos","Alemania","China"],2,"Describe las fábricas inteligentes de la 4.ª revolución industrial."],
+["Un principio de la Industria 4.0 es…",["Eliminar los datos","Conectar personas, máquinas y cosas (IoT)","Usar solo papel","Producir sin planificar"],1,"También el uso de datos para eficiencia."],
+["Una desventaja de la impresión 3D es…",["Prototipos rápidos","Diseños sin límites","Pérdida de puestos de trabajo","Reducción de costos"],2,"Las otras opciones son ventajas."],
+["La impresión 3D crea objetos…",["Por capas sucesivas de material","Cortando un bloque","Solo con papel","Sin material"],0,"Es fabricación por adición."],
+["La Realidad Aumentada…",["Reemplaza totalmente el mundo real","Combina elementos virtuales con el mundo real","Solo funciona sin cámara","Es igual a la RV"],1,"Ej.: Pokémon Go."],
+["La Realidad Virtual se diferencia de la RA porque…",["Agrega objetos al mundo físico","Crea un ambiente 100 % digital e inmersivo","No usa dispositivos","Usa solo la cámara"],1,"RV reemplaza lo real; RA lo complementa."],
+["¿Cuál NO es un componente de la RA?",["Objeto real de referencia","Dispositivo con cámara","Software que interpreta la imagen","Máquina de coser"],3,"Los tres componentes son objeto, cámara y software."],
+["La IA funciona combinando…",["Datos, procesamiento rápido y algoritmos","Solo cables","Solo papel","Solo música"],0,"Aprende patrones de grandes cantidades de datos."],
+["Un simulador…",["Replica o recrea una actividad","Es un virus","Es un protocolo","Es un navegador"],0,"Ej.: simulador de vuelo."],
+["La huella digital es…",["El rastro de nuestra actividad en Internet","Una contraseña","Un virus","Un dominio"],0,"Se forma con IP, cookies y redes sociales."],
+["Las cookies sirven para…",["Vincular nuestras acciones en un hilo conectado de lo que hacemos y nos gusta","Apagar el equipo","Cifrar el correo","Aumentar el volumen"],0,"Son datos recopilados al navegar."],
+["Una contraseña segura debe…",["Tener tu fecha de cumpleaños","Ser larga y combinar letras, números y símbolos","Ser igual en todas tus cuentas","Guardarse en el dispositivo"],1,"Y debe ser secreta, distinta por cuenta y cambiarse periódicamente."],
+["¿Qué indica el candadito junto a la URL?",["Que la página es lenta","Que tiene certificado de seguridad (https)","Que es de pago","Que es una red social"],1,"Importante al hacer transacciones en línea."],
+["Un correo falso que imita a un banco para robar datos es…",["Phishing","Streaming","Hipertexto","Hosting"],0,"Es un ataque de ingeniería social."],
+["Un ataque que secuestra archivos y pide rescate es…",["Ransomware","Cookie","Troll","Algoritmo"],0,"Forma de malware."],
+["La cámara de eco consiste en…",["Escuchar solo opiniones iguales a la nuestra","Un programa de audio","Un tipo de cookie","Una red wifi"],0,"Los algoritmos refuerzan lo que ya pensamos."],
+["Ante un troll lo mejor es…",["Responderle con insultos","Bloquear, denunciar y no engancharse","Compartir su mensaje","Seguirlo"],1,"Responderle le da visibilidad."],
+["Compartir sin saber que es falso un contenido es…",["Misinformación","Malinformación","Sátira","Hipertexto"],0,"Malinformación es contenido real usado en un contexto engañoso."],
+["Cuando el titular no corresponde al contenido hablamos de…",["Conexión falsa (ciberanzuelo)","Contenido impostor","Deepfake","Sátira"],0,"Busca clics e ingresos por visitas."],
+["Los deepfakes se crean con…",["Inteligencia artificial","Impresoras 3D","Cartas","Correo tradicional"],0,"Son videos que imitan la realidad casi a la perfección."],
+["Si un contenido te genera enojo o asombro fuerte, debes…",["Compartirlo ya","Respirar y tomarte tiempo antes de reaccionar","Borrar tu cuenta","Comentar con insultos"],1,"Y luego verificar en otras fuentes."],
+["¿Cuáles son los tres principios democráticos de la ciudadanía digital?",["Libertad, igualdad y fraternidad","Poder, fama y dinero","Velocidad, memoria y pantalla","Rapidez, anonimato y gratis"],0,"Junto con valores como respeto, responsabilidad y diálogo plural."],
+["¿Quién llamó «netiqueta» a la etiqueta en la red?",["Virginia Shea (1994)","Bill Gates","Tim Berners-Lee","Alan Turing"],0,"Netiqueta = normas de comportamiento en línea."],
+["El antídoto contra la cámara de eco es…",["El diálogo plural","Bloquear a todos","Usar solo una red social","Publicar más"],0,"Hablar y escuchar a quienes piensan distinto."],
+["Publicar fotos de otras personas sin su permiso…",["Es parte de la libertad de expresión sin límites","Afecta su huella digital y su privacidad","No tiene consecuencias","Es un derecho"],1,"Se debe respetar la privacidad ajena."],
+["En la fila base, los dedos de la mano izquierda descansan en…",["A S D F","Q W E R","Z X C V","J K L Ñ"],0,"La derecha va en J K L Ñ."],
+["Los índices tienen la marca para ubicarse en las teclas…",["F y J","A y Ñ","Q y P","Z y M"],0,"Así se encuentra la posición sin mirar."]
+];
+const $=s=>document.querySelector(s),esc=t=>t.replace(/&/g,"&amp;").replace(/</g,"&lt;");
+document.querySelectorAll("#nav button").forEach(b=>b.onclick=()=>{document.querySelectorAll("#nav button,main section").forEach(e=>e.classList.remove("on"));b.classList.add("on");$("#"+b.dataset.t).classList.add("on");scrollTo(0,0)});
+$("#res").innerHTML=S.map((s,i)=>`<details ${i?"":"open"}><summary>${s[0]}</summary><div class="body"><dl>${s[1].map(x=>`<dt>${x[0]}</dt><dd>${esc(x[1])}</dd>`).join("")}</dl><div class="tip">💡 ${esc(s[2])}</div></div></details>`).join("");
+// Quiz
+let qi=0,sc=0,wrong=[],order=[];
+function startQ(arr){order=arr;qi=0;sc=0;wrong=[];showQ()}
+function showQ(){
+ const q=$("#quiz");
+ if(qi>=order.length){const p=Math.round(sc/order.length*100);q.innerHTML=`<div class="card"><p class="q">Resultado: ${sc} de ${order.length} (${p} %)</p><p>${p>=90?"¡Excelente! Estás listo/a para el examen.":p>=70?"Muy bien, repasa los puntos que fallaste.":"Repasa el resumen y vuelve a intentarlo."}</p>${wrong.length?`<button class="btn" id="rw">Practicar solo las falladas (${wrong.length})</button>`:""}<button class="btn s" id="ra">Reiniciar todo</button></div>`;
+  if(wrong.length)$("#rw").onclick=()=>startQ([...wrong]);$("#ra").onclick=()=>startQ(shuffle([...Q.keys()]));return}
+ const d=Q[order[qi]],pc=qi/order.length*100;
+ q.innerHTML=`<div class="meta"><span>Pregunta ${qi+1} de ${order.length}</span><span>✔ ${sc}</span></div><div class="bar"><i style="width:${pc}%"></i></div><div class="card"><p class="q">${esc(d[0])}</p>${d[1].map((o,j)=>`<button class="opt" data-j="${j}">${esc(o)}</button>`).join("")}<div id="ex"></div></div>`;
+ q.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{const j=+b.dataset.j;q.querySelectorAll(".opt").forEach(x=>x.disabled=true);
+  q.querySelectorAll(".opt")[d[2]].classList.add("ok");
+  if(j===d[2])sc++;else{b.classList.add("ko");wrong.push(order[qi])}
+  $("#ex").innerHTML=`<p class="exp">${j===d[2]?"✅ ¡Correcto! ":"❌ "}${esc(d[3])}</p><button class="btn" id="nx">${qi+1<order.length?"Siguiente":"Ver resultado"}</button>`;
+  $("#nx").onclick=()=>{qi++;showQ()}})}
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+startQ(shuffle([...Q.keys()]));
+// Flashcards
+const F=S.flatMap(s=>s[1]);let fi=0,fo=[...F.keys()],back=false;
+function showF(){const c=F[fo[fi]];$("#fc").innerHTML=`<div class="meta"><span>Tarjeta ${fi+1} de ${F.length}</span><span>Toca la tarjeta para voltearla</span></div><div class="card fc" id="c"><div><small>${back?"Definición":"Concepto"}</small>${back?esc(c[1]):"<b>"+esc(c[0])+"</b>"}</div></div><button class="btn s" id="pv">← Anterior</button><button class="btn" id="nf">Siguiente →</button><button class="btn s" id="sh">🔀 Mezclar</button>`;
+ $("#c").onclick=()=>{back=!back;showF()};$("#pv").onclick=()=>{fi=(fi-1+F.length)%F.length;back=false;showF()};$("#nf").onclick=()=>{fi=(fi+1)%F.length;back=false;showF()};$("#sh").onclick=()=>{fo=shuffle(fo);fi=0;back=false;showF()}}
+showF();
+$("#tips").innerHTML=`<details open><summary>Cómo preparar el examen</summary><div class="body"><ul><li>Lee el resumen una sección por día y luego haz el quiz completo.</li><li>Practica solo las preguntas falladas hasta acertarlas todas.</li><li>Usa las tarjetas para memorizar definiciones sin mirar.</li><li>Prepara ejemplos propios y relaciona cada tecnología con tu especialidad.</li><li>Repasa la presentación «Conceptos principales de Internet», la de «Ciudadanía digital responsable» y tu proyecto de ciudadanía digital.</li><li>Practica la digitación sin mirar el teclado y repasa el folleto de Destrezas Digitales.</li><li>Antes del examen, duerme bien y lee con calma cada pregunta.</li></ul><div class="tip">⚠️ Algunos puntos (dominio, hipertexto, URL, ciberseguridad, tipos de ataques, derechos y deberes, dedos de cada tecla) se complementaron con conocimiento general porque en las presentaciones están en imágenes. Compáralos con tus apuntes y el folleto.</div></div></details>`;
+</script>
+</body>
+</html>
